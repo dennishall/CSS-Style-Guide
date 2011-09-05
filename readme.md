@@ -40,7 +40,9 @@
     1.  hacks follow whatever property they override
 1.  Never code text in all caps in the markup (and usually not all lowercase either). Always choose an appropriate casing: either sentence case or title case. Use text-transform to achieve the desired casing.
 
-Project-specific
+
+## Project-specific
+
 1.     Property rules per line (all or one): one
 1.     Grouped selectors should appear on (the same line, separate lines): separate lines
 1.     Indentation: two spaces
