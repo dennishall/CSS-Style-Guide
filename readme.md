@@ -11,9 +11,9 @@
   1.     Header
   1.     Nav
   1.     Main content
-  *     Content type or item
-  *     Other content type or item
-  *     Etc.
+         *     Content type or item
+         *     Other content type or item
+         *     Etc.
   1.     Aside
   1.     Footer
 7.    Use the least specific selector expression possible
