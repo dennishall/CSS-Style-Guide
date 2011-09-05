@@ -6,16 +6,16 @@
 4.     Do not use @import, unless the backend system will ‘inline’ the file
 5.     Use semantically descriptive classes and ids. (I.e., “.redbox” is bad, “.errorMessage” is good.)
 6.     Keep it organized. Use project-standard comment blocks to demarcate major sections and subsections (may vary somewhat by project):
-  a.     Reset
-  b.     Base styling
-  c.     Header
-  d.     Nav
-  e.     Main content
-                                               i.     Content type or item
-                                              ii.     Other content type or item
-                                            iii.     Etc.
-  f.     Aside
-  g.     Footer
+  1.     Reset
+  1.     Base styling
+  1.     Header
+  1.     Nav
+  1.     Main content
+                                               1.     Content type or item
+                                               1.     Other content type or item
+                                               1.     Etc.
+  1.     Aside
+  1.     Footer
 7.    Use the least specific selector expression possible
 a.     Avoid !important
 b.     Introduce new namespaced classnames, even new wrapper elements, if needed (and possible) so as to reduce cascade override hell (most commonly happens with nested lists) – example: “.mymodule li li” -> “.mymodule-subitem”
