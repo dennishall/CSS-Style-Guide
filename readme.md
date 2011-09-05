@@ -11,9 +11,9 @@
   1.     Header
   1.     Nav
   1.     Main content
-                                               1.     Content type or item
-                                               1.     Other content type or item
-                                               1.     Etc.
+    1.     Content type or item
+    1.     Other content type or item
+    1.     Etc.
   1.     Aside
   1.     Footer
 7.    Use the least specific selector expression possible
@@ -30,14 +30,14 @@ b.     Introduce new namespaced classnames, even new wrapper elements, if needed
 16. Use ids for content that will never repeat per page, use classnames for elements that do repeat per page – as needed for either.
 17. Favor classnames over ids.
 18. Judiciously choose whether to use descendant selectors or namespaced classnames. The performance overhead of descendant selectors is negligible.
-  a.     Descendant selector/ root classname example: “.bio img {float:left;}”
-  b.     Namespaced classname example: “.bio-img {float:left;}”
+  1.     Descendant selector/ root classname example: “.bio img {float:left;}”
+  1.     Namespaced classname example: “.bio-img {float:left;}”
 19. Property group order does not matter, but properties should be grouped together:
-  a.     layout-related: position, float, width, height, padding, margin, border
-  b.     font-related
-  c.      backgrounds
-  d.     vendor-prefixed and filters (-webkit-, -moz-, -o-, -ms-)
-  e.     hacks follow whatever property they override
+  1.     layout-related: position, float, width, height, padding, margin, border
+  1.     font-related
+  1.      backgrounds
+  1.     vendor-prefixed and filters (-webkit-, -moz-, -o-, -ms-)
+  1.     hacks follow whatever property they override
 20.  Never code text in all caps in the markup (and usually not all lowercase either). Always choose an appropriate casing: either sentence case or title case. Use text-transform to achieve the desired casing.
  
 Project-specific
