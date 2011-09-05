@@ -33,11 +33,11 @@
     1.  Descendant selector/ root classname example: “.bio img {float:left;}”
     1.  Namespaced classname example: “.bio-img {float:left;}”
 1.  Property group order does not matter, but properties should be grouped together:
-    1.  layout-related: position, float, width, height, padding, margin, border
-    1.  font-related
-    1.  backgrounds
-    1.  vendor-prefixed and filters (-webkit-, -moz-, -o-, -ms-)
-    1.  hacks follow whatever property they override
+    *   layout-related: position, float, width, height, padding, margin, border
+    *   font-related
+    *   backgrounds
+    *   vendor-prefixed and filters (-webkit-, -moz-, -o-, -ms-)
+    *   hacks follow whatever property they override
 1.  Never code text in all caps in the markup (and usually not all lowercase either). Always choose an appropriate casing: either sentence case or title case. Use text-transform to achieve the desired casing.
 
 
