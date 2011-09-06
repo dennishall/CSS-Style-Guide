@@ -43,6 +43,6 @@
 
 ## Project-specific
 
-1.     Property rules per line (all or one): one
+1.     Property rules all on one line or each on a separate line? separate lines
 1.     Grouped selectors should appear on (the same line, separate lines): separate lines
 1.     Indentation: two spaces
