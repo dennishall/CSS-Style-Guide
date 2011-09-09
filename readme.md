@@ -26,7 +26,7 @@
 1.  When using sprites or other image-replacement styling, include fallback text content as appropriate (it is usually appropriate) – think “alt tag”
 1.  Use *property to target ie6+7, follow with _property to exclusively target ie6 if needed. Although “hacks” are hotly debated, they preserve specificity and facilitate maintainability.
 1.  Specify units for non-zero properties (0 is 0, but 1 can be px, em, in)
-1.  Do not specify a unitsfor zero (i.e., “0px” is bad)
+1.  Do not specify a unit for zero (i.e., “0px” is bad)
 1.  Use ids for content that will never repeat per page, use classnames for elements that do repeat per page – as needed for either.
 1.  Favor classnames over ids.
 1.  Judiciously choose whether to use descendant selectors or namespaced classnames. The performance overhead of descendant selectors is negligible.
