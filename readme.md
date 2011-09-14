@@ -1,4 +1,4 @@
-# CSS Development Guide
+# CSS Style Guide
 
 1.  Do not use inline styles, neither the block kind (`<style></style>`), nor the tag attribute kind (`style=””`).
 1.  Implied by #1 – use external stylesheets
