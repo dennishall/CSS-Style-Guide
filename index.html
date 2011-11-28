@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>dennishall/CSS-Style-Guide @ GitHub</title>
+
+  <style type="text/css">
+    body {
+      margin-top: 1.0em;
+      background-color: #ffffff;
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+      color: #000000;
+    }
+    #container {
+      margin: 0 auto;
+      width: 700px;
+    }
+    h1 { font-size: 3.8em; color: #000000; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.5em; color: #000000; }
+    h3 { text-align: center; color: #000000; }
+    a { color: #000000; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+    pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+  </style>
+</head>
+
+<body>
+  <a href="https://github.com/dennishall/CSS-Style-Guide"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+
+    <div class="download">
+      <a href="https://github.com/dennishall/CSS-Style-Guide/zipball/master">
+        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
+      <a href="https://github.com/dennishall/CSS-Style-Guide/tarball/master">
+        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
+    </div>
+
+    <h1><a href="https://github.com/dennishall/CSS-Style-Guide">CSS-Style-Guide</a>
+      <span class="small">by <a href="https://github.com/dennishall">dennishall</a></span></h1>
+
+    <div class="description">
+      
+    </div>
+
+    
+      <p>h3. Indentation
+
+Use an indent of 2 spaces, with no tabs.
+
+h3. Names & Capitalization
+
+ID names should be in lowerCamelCase.
+
+<pre>#pageContainer {</pre>
+
+Class names should be in lowercase, with words separated by underscores.
+
+<pre>.my_class_name {</pre>
+
+HTML elements should be in lowercase.
+
+<pre>body, div {</pre>
+
+h3. Use External Stylesheets
+
+Do not write inline styles or embedded styles unless unavoidable. Inlining or embedding styles is most likely avoidable -- ask the ThinkUp mailing list if you're not sure.
+
+For performance reasons (see "Steve Souder's blog":http://www.stevesouders.com/blog/2009/04/09/dont-use-import/), always link to external stylesheets using the @<link>@ syntax rather than the @import@ syntax.
+
+<pre>
+<link rel="stylesheet" href="a.css"> <!-- Okay -->
+<style type="text/css">@import url("a.css");</style> <!-- Not Okay -->
+</pre>
+
+h3. Write Valid CSS
+
+ThinkUp's CSS should be valid to the "CSS 2.1 specification":http://www.w3.org/TR/CSS2/. CSS 3.0 rules are acceptable as long as they degrade gracefully.
+
+Run any CSS you write through "the W3C validator":http://jigsaw.w3.org/css-validator/ and ensure it passes before submitting a pull request. 
+
+h3. Comments
+
+Comments are strongly encouraged. Concerned about performance? Don't worry, comments can be removed by CSS minification utilities for use on production servers.
+
+Comments that refer to selector blocks should be on a separate line immediately before the block to which they refer. Short inline comments may be added after a property-value pair, preceded with a space.
+
+<pre>/* Comment about this selector block. */
+selector {
+  property: value; /* Comment about this property-value pair. */
+}</pre>
+
+Only C style comments (<code>/* Comment goes here. */</code>) are valid for CSS code. Do not use C++ style comments (<code>// Comment goes here.</code>).
+
+h3. Selectors
+
+Selectors should be on a single line, with a space after the last selector, followed by an opening brace. A selector block should end with a closing curly brace that is unindented and on a separate line. A blank line should be placed between each selector block. Selectors should never be indented.
+
+<pre>selector {
+}
+
+selector {
+}</pre>
+
+Multiple selectors should each be on a single line, with no space after each comma.
+
+<pre>selector1,
+selector2,
+selector3,
+selector4 {
+}</pre>
+
+When selecting HTML elements, write the selector in lowercase.
+
+<pre>div { /* Okay */
+DIV { /* Not okay */</pre>
+
+h3. Property-Value Pairs
+
+Property-value pairs should be listed starting on the line after the opening curly brace. Each pair should:
+* be on its own line;
+* be indented one level;
+* have a single space after the colon that separates the property name from the property value; and
+* end in a semicolon.
+
+<pre>selector {
+  name: value;
+  name: value;
+}</pre>
+
+Multiple property-value pairs should be listed in alphabetical order by property.
+
+<pre>/* Not okay */
+body {
+  font-weight: normal;
+  width: 500px;
+  background: #000;
+}
+
+/* Okay */
+body {
+  background: #000;
+  font-weight: normal;
+  width: 500px;
+}</pre>
+
+For properties with multiple values, separate each value with a single space following the comma(s).
+
+<pre>  font-family: Helvetica, sans-serif;</pre>
+
+If a single value contains any spaces, that value must be enclosed within double quotation marks.
+
+<pre>  font-family: "Lucida Grande", Helvetica, sans-serif;</pre>
+
+h3. Colors
+
+When denoting color using hexadecimal notation, use all capital letters. Both three-digit and six-digit hexadecimal notation are acceptable; if it's possible to specify the desired color using three-digit hexadecimal notation, do so as you'll save the end-user a few bytes of download time.
+
+<pre>
+  color: #FFF;    /* Okay */
+  color: #FE9848; /* Okay */
+  color: #fff;    /* Not okay */
+</pre>
+
+h3. Dimensions
+
+When denoting the dimensions -- that is, the width or height -- of an element or its margins, borders, or padding, specify the units in either <code>em</code>, <code>px</code>, or <code>%</code>. If the value of the width or height is 0, do not specify units.
+
+<pre>
+  width: 12px; /* Okay */
+  width: 12%;  /* Okay */
+  width: 12em; /* Okay */
+  width: 12;   /* Not okay */
+  width: 0;    /* Okay */
+  width: 0px;  /* Not okay */
+</pre></p>
+    
+
+    
+
+    
+
+    
+
+    
+      <h2>Authors</h2>
+      <p>Dennis Hall (halldb02@hotmail.com)<br/>      </p>
+    
+
+    
+      <h2>Contact</h2>
+      <p>Dennis Hall (halldb02@hotmail.com)<br/>      </p>
+    
+
+    <h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="https://github.com/dennishall/CSS-Style-Guide/zipball/master">zip</a> or
+      <a href="https://github.com/dennishall/CSS-Style-Guide/tarball/master">tar formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/dennishall/CSS-Style-Guide</pre>
+    </p>
+
+    <div class="footer">
+      get the source code on GitHub : <a href="https://github.com/dennishall/CSS-Style-Guide">dennishall/CSS-Style-Guide</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
